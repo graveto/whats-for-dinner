@@ -28,6 +28,13 @@
   margin: 0 1rem;
 }
 
+.recipe__directions img {
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  margin: 0 1rem;
+}
+
 @media (min-width: 580px) {
   /* .recipe__directions {
     flex-direction: row;

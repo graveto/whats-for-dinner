@@ -26,6 +26,10 @@ const Recipe = ({ recipe }) => {
     <Card className="recipe">
       <div className="recipe__directions">
         <h2>{title}</h2>
+        <img
+          src={require(`../../assets/images/maxresdefault.jpg`).default}
+          alt="Pasta"
+        />
         <div>{recipe.directions}</div>
       </div>
       {/*<button onClick={clickHandler}>Update</button>
