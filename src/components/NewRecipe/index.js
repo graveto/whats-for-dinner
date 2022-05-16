@@ -1,10 +1,15 @@
 import RecipeForm from "../RecipeForm";
 import "./NewRecipe.css";
 
-const NewRecipe = () => {
+const NewRecipe = (props) => {
+  const saveRecipeDataHandler = (enteredRecipeData) => {
+    const recipeData = { ...enteredRecipeData };
+    props.onRecipeAdd(recipeData);
+  };
+
   return (
     <div className="new-recipe">
-      <RecipeForm />
+      <RecipeForm onSaveRecipeData={saveRecipeDataHandler} />
     </div>
   );
 };
