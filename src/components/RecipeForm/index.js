@@ -24,7 +24,7 @@ const RecipeForm = (props) => {
     const recipeData = {
       title: recipeTitle,
       link: recipeLink,
-      directions: recipeLink
+      directions: recipeDirections
     };
 
     props.onSaveRecipeData(recipeData);
