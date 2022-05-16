@@ -36,7 +36,6 @@ function App() {
       recipe["id"] = prevState.length;
       return [...prevState, recipe];
     });
-    console.log(recipes);
   };
 
   return (
