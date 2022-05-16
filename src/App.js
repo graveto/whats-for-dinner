@@ -1,6 +1,7 @@
 import NewRecipe from "./components/NewRecipe";
 import Recipes from "./components/Recipes";
 import AppHeader from "./components/AppHeader";
+import Search from "./components/Search";
 import { useState } from "react";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
   return (
     <div>
       <AppHeader />
+      <Search />
       <NewRecipe onRecipeAdd={addRecipeHandler} />
       <Recipes recipes={recipes} />
     </div>

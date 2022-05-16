@@ -1,4 +1,4 @@
-.new-recipe {
+.search-recipe {
   background-color: #a892ee;
   padding: 1rem;
   margin: 2rem auto;
@@ -9,7 +9,7 @@
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
 }
 
-.new-recipe button {
+.search-recipe button {
   font: inherit;
   cursor: pointer;
   padding: 1rem 2rem;
@@ -19,19 +19,19 @@
   border-radius: 12px;
 }
 
-.new-recipe button:hover,
-.new-recipe button:active {
+.search-recipe button:hover,
+.search-recipe button:active {
   background-color: #510674;
   border-color: #510674;
 }
 
-.new-recipe button.alternative {
+.search-recipe button.alternative {
   color: #220131;
   border-color: transparent;
   background-color: transparent;
 }
 
-.new-recipe button.alternative:hover,
-.new-recipe button.alternative:active {
+.search-recipe button.alternative:hover,
+.search-recipe button.alternative:active {
   background-color: #ddb3f8;
 }

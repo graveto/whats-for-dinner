@@ -5,6 +5,7 @@ const RecipeForm = (props) => {
   const [recipeTitle, setRecipeTitle] = useState("");
   const [recipeLink, setRecipeLink] = useState("");
   const [recipeDirections, setRecipeDirections] = useState("");
+  const [recipeIngredients, setRecipeIngredients] = useState("");
 
   const titleChangeHandler = (event) => {
     setRecipeTitle(event.target.value);
@@ -16,6 +17,10 @@ const RecipeForm = (props) => {
 
   const directionsChangeHandler = (event) => {
     setRecipeDirections(event.target.value);
+  };
+
+  const IngredientsChangeHandler = (event) => {
+    setRecipeIngredients(event.target.value);
   };
 
   const formSubmitHandler = (event) => {
@@ -69,6 +74,28 @@ const RecipeForm = (props) => {
               value={recipeDirections}
               onChange={directionsChangeHandler}
             />
+          </div>
+          <div className="new-recipe__control">
+            <label htmlFor="ingredients">Ingredients</label>
+            <div>
+              <input
+                type="text"
+                name="link"
+                id="link"
+                value={recipeIngredients}
+                onChange={IngredientsChangeHandler}
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                name="link"
+                id="link"
+                value={recipeIngredients}
+                onChange={IngredientsChangeHandler}
+              />
+              <button>+</button>
+            </div>
           </div>
         </div>
         <div className="new-recipe__actions">
