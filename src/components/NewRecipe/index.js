@@ -1,8 +1,11 @@
+import RecipeForm from "../RecipeForm";
 import "./NewRecipe.css";
 
 const NewRecipe = () => {
-  return(
-    <div className="new-recipe"></div>
+  return (
+    <div className="new-recipe">
+      <RecipeForm />
+    </div>
   );
 };
 

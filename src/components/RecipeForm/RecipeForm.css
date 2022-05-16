@@ -1,4 +1,4 @@
-.new-expense__controls {
+.new-recipe__controls {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -6,13 +6,14 @@
   text-align: left;
 }
 
-.new-expense__control label {
+.new-recipe__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
 }
 
-.new-expense__control input {
+.new-recipe__control input,
+textarea {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
@@ -21,6 +22,12 @@
   max-width: 100%;
 }
 
-.new-expense__actions {
+h4 {
+  padding: 0 0 1rem 0;
+  color: #fff;
+  text-align: left;
+}
+
+.new-recipe__actions {
   text-align: right;
 }
