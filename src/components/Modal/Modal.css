@@ -1,0 +1,37 @@
+.modal header {
+  min-height: 60px;
+  height: 60px;
+  color: #ffffff;
+  background-color: #800000;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 14px;
+}
+
+.modal header h4 {
+  margin: 0;
+  text-align: left;
+}
+
+.modal header span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 20px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.modal header span:hover {
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

@@ -1,26 +1,19 @@
 import Card from "../Card";
+import Modal from "../Modal";
 import "./Recipe.css";
 import { useState } from "react";
 
 const Recipe = ({ recipe }) => {
   const [title, setTitle] = useState(recipe.title);
-  // const [timer, setTimer] = useState(0);
+  const [visible, setVisible] = useState("hide");
 
-  // const incrementer = () => {
-  //   let increm = 0;
-  //   let timerInterval = setInterval(() => {
-  //     increm++;
-  //     if (increm === 10) {
-  //       clearInterval(timerInterval);
-  //     }
-  //     setTimer(increm);
-  //   }, 1000);
-  // };
-
-  // const clickHandler = () => {
-  //   setTitle("Updated!");
-  //   incrementer();
-  // };
+  const modalHandler = () => {
+    if (visible === "hide") {
+      setVisible("show");
+    } else {
+      setVisible("hide");
+    }
+  };
 
   return (
     <Card className="recipe">
@@ -33,9 +26,13 @@ const Recipe = ({ recipe }) => {
           />
           <div>{recipe.directions}</div>
         </div>
+        <button onClick={modalHandler}>View</button>
+        <Modal
+          onClick={modalHandler}
+          onCloseModal={modalHandler}
+          visible={visible}
+        />
       </div>
-      {/*<button onClick={clickHandler}>Update</button>
-       <button>{timer}</button>*/}
     </Card>
   );
 };
