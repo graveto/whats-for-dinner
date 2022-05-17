@@ -1,10 +1,21 @@
+import { useState } from "react";
 import "./SearchForm.css";
 
-const formSubmitHandler = (event) => {};
+const SearchForm = (props) => {
+  const [recipeSearch, setRecipeSearch] = useState("");
 
-const searchChangeHandler = () => {};
+  const formSubmitHandler = (event) => {
+    event.preventDefault();
+    const recipeSearchData = {
+      title: recipeSearch
+    };
+    props.onSearchRecipeData(recipeSearchData);
+    setRecipeSearch("");
+  };
 
-const SearchForm = () => {
+  const searchChangeHandler = (event) => {
+    setRecipeSearch(event.target.value);
+  };
   return (
     <div>
       <h4>Search Recipes</h4>

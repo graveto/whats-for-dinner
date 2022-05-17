@@ -16,24 +16,26 @@ const Recipe = ({ recipe }) => {
   };
 
   return (
-    <Card className="recipe">
-      <div className="recipe__directions">
-        <h2>{title}</h2>
-        <div className="recipe__directions__row">
-          <img
-            src={require(`../../assets/images/maxresdefault.jpg`).default}
-            alt="Pasta"
+    <li>
+      <Card className="recipe">
+        <div className="recipe__directions">
+          <h2>{title}</h2>
+          <div className="recipe__directions__row">
+            <img
+              src={require(`../../assets/images/maxresdefault.jpg`).default}
+              alt="Pasta"
+            />
+            <div>{recipe.directions}</div>
+          </div>
+          <button onClick={modalHandler}>View</button>
+          <Modal
+            onClick={modalHandler}
+            onCloseModal={modalHandler}
+            visible={visible}
           />
-          <div>{recipe.directions}</div>
         </div>
-        <button onClick={modalHandler}>View</button>
-        <Modal
-          onClick={modalHandler}
-          onCloseModal={modalHandler}
-          visible={visible}
-        />
-      </div>
-    </Card>
+      </Card>
+    </li>
   );
 };
 
