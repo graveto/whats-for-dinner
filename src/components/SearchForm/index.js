@@ -16,6 +16,7 @@ const SearchForm = (props) => {
   const searchChangeHandler = (event) => {
     setRecipeSearch(event.target.value);
   };
+
   return (
     <div>
       <h4>Search Recipes</h4>
@@ -29,9 +30,17 @@ const SearchForm = (props) => {
               onChange={searchChangeHandler}
             />
           </div>
-        </div>
-        <div className="search-recipe__actions">
-          <button type="submit">Search</button>
+          <div className="search-buttons">
+            <div className="search-recipe__actions">
+              <button type="submit">Search</button>
+            </div>
+            <div className="search-recipe__actions">
+              <button onClick={(event)=>{
+                event.preventDefault();
+                props.onSearchRecipeData("");
+              }}>Show All</button>
+            </div>
+          </div>
         </div>
       </form>
     </div>

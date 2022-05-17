@@ -1,12 +1,18 @@
 .search-recipe__controls {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
   text-align: left;
   color: #40005d;
 }
 
+.search-recipe__controls .search-buttons {
+  display: flex;
+}
+
+.search-recipe__controls .search-buttons {}
 .search-recipe__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -37,7 +43,7 @@ h4 {
 }
 
 .search-recipe__actions {
-  text-align: right;
+  margin-right: 5px;
 }
 
 .search-recipe__controls .search-recipe__control button {
