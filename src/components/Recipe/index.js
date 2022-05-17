@@ -1,7 +1,8 @@
+import { useState } from "react";
 import Card from "../Card";
 import Modal from "../Modal";
 import "./Recipe.css";
-import { useState } from "react";
+import recipeImage from "../../assets/images/maxresdefault.jpg";
 
 const Recipe = ({ recipe }) => {
   const [title, setTitle] = useState(recipe.title);
@@ -21,10 +22,7 @@ const Recipe = ({ recipe }) => {
         <div className="recipe__directions">
           <h2>{title}</h2>
           <div className="recipe__directions__row">
-            <img
-              src={require(`../../assets/images/maxresdefault.jpg`).default}
-              alt="Pasta"
-            />
+            <img src={recipeImage} alt="Pasta" />
             <div>{recipe.directions}</div>
           </div>
           <button onClick={modalHandler}>View</button>

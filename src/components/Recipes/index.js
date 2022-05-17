@@ -16,9 +16,13 @@ const Recipes = (props) => {
   return (
     <Card className="recipes">
       <ul>
-        {searchedRecipes.map((recipe) => {
-          return <Recipe key={recipe.id} recipe={recipe} />;
-        })}
+        {searchedRecipes.length === 0 ? (
+          <p>No recipes found</p>
+        ) : (
+          searchedRecipes.map((recipe) => {
+            return <Recipe key={recipe.id} recipe={recipe} />;
+          })
+        )}
       </ul>
     </Card>
   );

@@ -10,3 +10,7 @@
   list-style: none;
   padding-inline-start: 0;
 }
+
+.recipes p {
+  color: white;
+}

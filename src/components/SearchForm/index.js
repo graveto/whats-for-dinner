@@ -27,6 +27,7 @@ const SearchForm = (props) => {
               type="text"
               name="search"
               id="search"
+              value={recipeSearch}
               onChange={searchChangeHandler}
             />
           </div>
