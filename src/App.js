@@ -33,13 +33,10 @@ const DUMMY_RECIPES = [
 
 function App() {
   const [recipes, setRecipes] = useState(DUMMY_RECIPES);
+  const [searchedRecipe, setSearchedRecipe] = useState("");
 
   const searchRecipeHandler = (recipeTitle) => {
-    setRecipes((prevRecipes) => { 
-      return prevRecipes.filter((recipe) => {
-        return recipe.title.toLocaleLowerCase() === recipeTitle.title.toLocaleLowerCase();
-      });
-    });
+    setSearchedRecipe(recipeTitle);
   };
 
   const addRecipeHandler = (recipe) => {
@@ -54,7 +51,7 @@ function App() {
       <AppHeader />
       <Search onRecipeSearch={searchRecipeHandler} />
       <NewRecipe onRecipeAdd={addRecipeHandler} />
-      <Recipes recipes={recipes} />
+      <Recipes recipes={recipes} searchedRecipe={searchedRecipe}/>
     </div>
   );
 }

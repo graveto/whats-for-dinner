@@ -2,11 +2,21 @@ import Card from "../Card";
 import Recipe from "../Recipe";
 import "./Recipes.css";
 
-const Recipes = ({ recipes }) => {
+const Recipes = (props) => {
+  let searchedRecipes = [];
+  if (props.searchedRecipe.title) {
+    searchedRecipes = props.recipes.filter((recipe) => {
+      return (
+        recipe.title.toLowerCase() === props.searchedRecipe.title.toLowerCase()
+      );
+    });
+  } else {
+    searchedRecipes = props.recipes;
+  }
   return (
     <Card className="recipes">
       <ul>
-        {recipes.map((recipe) => {
+        {searchedRecipes.map((recipe) => {
           return <Recipe key={recipe.id} recipe={recipe} />;
         })}
       </ul>
